@@ -1,0 +1,48 @@
+:root {
+  --nav-hover-color: #82aaff;
+  --heading-color: #ffffff;
+  --heading-font: "Nunito", sans-serif;
+  --background-color: #1e1e1e;
+  --surface-color: #252526;
+  --default-color: #f1f1f1;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+header {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.6);
+}
+
+.nav-item a {
+  color: var(--default-color);
+}
+
+.hero h2,
+.section-title,
+.pricing-item p,
+.pricing-item h3 {
+  color: var(--default-color);
+}
+
+#dark-mode-toggle {
+  color: white;
+}
+.value-card h3 {
+  color: #012970;
+}
+/* .hero h2 {
+  color: #012970;
+}
+.hero p {
+  color: black;
+} */
+section.hero {
+  background-image: none;
+}
+.hero button {
+  color: white;
+}
