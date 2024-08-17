@@ -18,12 +18,21 @@ filterItems.forEach((filter) => {
 });
 
 const toggleButton = document.getElementById("dark-mode-toggle");
-const theme = document.getElementById("theme-link"); // Your link tag at the end of the head
+const theme = document.getElementById("theme-link");
 
 toggleButton.onclick = function () {
   if (theme.getAttribute("href") === "") {
-    theme.setAttribute("href", "dark-mode.css"); // Path to your dark mode CSS file
+    theme.setAttribute("href", "dark-mode.css");
+    window.localStorage.setItem('theme', 'dark');
   } else {
     theme.setAttribute("href", "");
+    window.localStorage.setItem('theme', 'light');
   }
 };
+document.addEventListener('DOMContentLoaded',()=>  {
+  if(window.localStorage.getItem('theme')==='dark'){
+    theme.setAttribute("href", "dark-mode.css");
+
+  }
+  else theme.setAttribute("href", "");
+});
